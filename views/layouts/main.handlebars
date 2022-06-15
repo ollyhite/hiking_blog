@@ -5,16 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colorado n Taiwan Hiking Blog</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>Follow me to hiking in CO and Taiwan</h1>
+    <h1>Let's go Hiking</h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
+  <nav class="d-flex justify-content-between align-items-center">
+    <div>
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+    </div>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
@@ -22,12 +26,7 @@
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>Enjoy the mountain</h2>
-    </aside>
-    <div>
       {{{body}}}
-    </div>
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
