@@ -1,15 +1,19 @@
 :root {
-  --primary: #417368;
+  --primary: #448983;
   --secondary: hwb(162 53% 42%);
   --tertiary: #5e877f;
   --quatrinary: #6c6b67;
   --light: #e3e4e3;
-  --dark: #182c23;
+  --dark: #4B4B4D;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
+  --pagebg:hwb(162 53% 42% / 0.781);
 }
 
 body {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
   font-family: Arial;
   margin: 0;
   display: flex;
@@ -17,6 +21,10 @@ body {
   min-height: 100vh;
   justify-content: flex-start;
   background-color: var(--quatrinary);
+  background-image: url('/images/hiking_bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -31,33 +39,36 @@ a:visited {
 header {
   padding: 20px;
   text-align: center;
-  background: var(--primary);
+  /* background: var(--primary); */
   color: var(--light);
+}
+header img{
+  width: 10rem;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
-  background-color: #fff;
 }
 
 
 nav {
-  background-color: var(--secondary);
+  margin: 20px 0;
 }
 
 nav a {
-  color: var(--light);
+  color: var(--dark);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
   color: var(--secondary);
   padding: 14px 20px;
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
 }
 
 .btn-no-style {
@@ -70,17 +81,15 @@ nav a:hover {
   transition: color 0.1s;
   margin-left: 16px;
 }
+.login-section{
+  width: 90%;
+}
 
 .login-card {
-  margin: 0 0 20px 0;
-  flex: 0 0 50%;
-  max-width: 50%;
+  width: 45%;
   padding: 5px;
-  border: 3px solid var(--dark);
   border-radius: var(--border-radius);
-  border-style: double;
-  border-width: thick;
-  background-color: #577a7c;
+  background-color: var(--pagebg);
   color: var(--light);
 }
 
@@ -98,4 +107,63 @@ nav a:hover {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+}
+
+.add-btn{
+  top: 5%;
+  right: 5%;
+}
+
+.blog-section{
+  background-color: var(--pagebg);
+  margin-top: 50px;
+  color: var(--dark);
+}
+
+.blog-section a{
+  color: var(--dark);
+}
+.blog-section a:hover{
+  color: var(--light);
+}
+
+.main-img h1{
+  color: var(--dark);
+  font-size: 3.5rem;
+}
+.add-icon{
+  width: 2rem;
+}
+
+.new-section{
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  margin-top: 50px;
+  color: var(--dark);
+  background-color: var(--pagebg);
+}
+.article-section{
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    margin-top: 50px;
+    color: var(--dark);
+    background-color: var(--pagebg);
+}
+.article-section img{
+  width: 90%;
+}
+
+.article-section form {
+  width: 100%;
+}
+
+.btn.btn-info{
+  background-color: var(--tertiary);
+  border: none;
+}
+
+.btn.btn-info:hover {
+  background-color: var(--quatrinary);
 }

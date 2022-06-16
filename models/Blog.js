@@ -23,11 +23,11 @@ Blog.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    // filename: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   defaultValue:'Pic error'
-    // },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue:'Pic error'
+    },
     create_date: {
       type: DataTypes.DATE,
       allowNull: false,

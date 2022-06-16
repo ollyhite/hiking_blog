@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="article-section d-flex flex-column align-items-center">
+
+    <h3>{{blog.title}}</h3>
+    <h4>Creat Date: {{format_date blog.create_date}}</h4>
+    <img src="/images/{{blog.filename}}" alt="">
+    <p>{{blog.article}}</p>
+    <section class="comments-section align-self-start my-5">
+    <h3>Comments</h3>
+    {{#each blog.comments as |comments|}}
+        {{!-- {{> comments-details blog.comments=comments}} --}}
+        <h5>{{comments.username}}</h5>
+        <p>Creat Date: {{format_date comments.create_date}}</p>
+        <p>{{comments.comment}}</p>
+    {{/each}}
+    </section>
+    <form>
+        <h3>Any things thought?</h3>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User Name</label>
+            <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="d-flex mt-5 btn-frame justify-content-end">
+            <button type="cancel" class="btn btn-info"><a href="/blog">Back</a></button>
+            <button type="submit" class="btn btn-info ms-3">Submit</button>
+            </div>
+    </form>
+    </div>
+
+</div>
