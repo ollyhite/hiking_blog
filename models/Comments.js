@@ -28,7 +28,7 @@ Comments.init(
         references: {
         model: 'blog',
         key: 'id',
-      },
+        },
     }
   },
   {

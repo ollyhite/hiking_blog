@@ -2,7 +2,8 @@
     <a class="add-btn position-absolute" href="/create_new"><img class="add-icon" src="/images/plus.svg" alt=""></a>
     <div class="blog-section">
     {{#each blogs as |blogs|}}
-            {{> blog-details blogs=blogs}}
+            {{!-- {{> blog-details blogs=blogs}} --}}
+            {{> blog-details}}
     {{/each}}
     </div>
     

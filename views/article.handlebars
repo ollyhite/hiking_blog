@@ -8,27 +8,31 @@
     <section class="comments-section align-self-start my-5">
     <h3>Comments</h3>
     {{#each blog.comments as |comments|}}
-        {{!-- {{> comments-details blog.comments=comments}} --}}
-        <h5>{{comments.username}}</h5>
+        {{> comments-detail }}
+        {{!-- <h5>{{comments.username}}</h5>
         <p>Creat Date: {{format_date comments.create_date}}</p>
-        <p>{{comments.comment}}</p>
+        <p>{{comments.comment}}</p> --}}
     {{/each}}
     </section>
-    <form>
+    <form class="comment-form">
         <h3>Any things thought?</h3>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">User Name</label>
-            <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+            {{!-- <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled> --}}
+            <input class="form-control" id="username" type="text" placeholder="Disabled input" aria-label="input example">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="comment" rows="3"></textarea>
             </div>
             <div class="d-flex mt-5 btn-frame justify-content-end">
             <button type="cancel" class="btn btn-info"><a href="/blog">Back</a></button>
-            <button type="submit" class="btn btn-info ms-3">Submit</button>
+            <button type="submit" class="btn btn-info ms-3 submit" data-blog-id="{{blog.id}}">Submit</button>
             </div>
+            {{!-- <button type="submit" class="btn btn-info ms-3 submit" value="{{blog.id}}">Submit</button>
+            </div> --}}
     </form>
     </div>
 
 </div>
+<script src="/js/comments.js"></script>

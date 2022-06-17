@@ -1,24 +1,25 @@
 <div class="container">
-    <div class="new-section">
+    <form class="new-section article-form">
     <div class="mb-3 ">
         <label for="exampleFormControlInput1" class="form-label">Title</label>
-        <input class="form-control form-control" type="text" placeholder="Enter the title" aria-label="form-control example">
+        <input class="form-control form-control" id="title" type="text" placeholder="Enter the title" aria-label="form-control example">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Brief Article</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter the brief info about the mountain"></textarea>
+        <textarea class="form-control" id="short_describe" rows="3" placeholder="Enter the brief info about the mountain"></textarea>
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Whole Article</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter the whole info about the mountain"></textarea>
+        <textarea class="form-control" id="article" rows="3" placeholder="Enter the whole info about the mountain"></textarea>
     </div>
     <div>
         <label for="formFileLg" class="form-label">Update the image</label>
-        <input class="form-control form-control" id="formFileLg" type="file">
+        <input class="form-control form-control" id="filename" type="file">
     </div>
     <div class="d-flex mt-5 btn-frame justify-content-end">
         <button type="cancel" class="btn btn-info"><a href="/blog">Back</a></button>
         <button type="submit" class="btn btn-info ms-3">Submit</button>
     </div>
-    </div>
+    </form>
 </div>
+<script src="/js/article.js"></script>

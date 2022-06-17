@@ -25,12 +25,12 @@ Blog.init(
     },
     filename: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       defaultValue:'Pic error'
     },
     create_date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     }
   },
   {

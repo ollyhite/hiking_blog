@@ -7,4 +7,9 @@ module.exports = {
       new Date(date).getFullYear()
     }`;
   },
+  today_date:()=>{
+    return `${new Date().getMonth() + 1}/${new Date().getDate()}/${
+      new Date().getFullYear()
+    }`
+  }
 };

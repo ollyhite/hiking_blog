@@ -10,8 +10,8 @@ router.get('/', async (req, res) => {
     const blogs = dbBlogData.map((blog) =>
       blog.get({ plain: true })
     );
-    console.log("blogs",blogs);
-
+    // console.log("blogs",blogs);
+    console.log("req.session.loggedIn",req.session);
     res.render('blog', {
       blogs,
       loggedIn: req.session.loggedIn,
