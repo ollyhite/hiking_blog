@@ -21,7 +21,8 @@ const commentsFormHandler = async (event) => {
         });
 
         if (response.ok) {
-        document.location.replace(`/blog/${blog_id}`);
+        // document.location.replace(`/blog/${blog_id}`);
+        console.log(response);
         } else {
         alert('Failed to add comments.');
         }
